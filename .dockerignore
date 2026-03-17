@@ -1,0 +1,17 @@
+**/.git
+**/.gitignore
+**/delete/
+**/*.pyc
+**/__pycache__
+**/venv/
+**/.venv/
+**/.env
+**/.env.example
+**/vercel.json
+**/.vscode
+**/.python-version
+**/TODO.md
+**/.dockerignore
+.DS_Store
+README.md
+pyproject.toml

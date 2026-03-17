@@ -1,0 +1,7 @@
+[project]
+name = "ml"
+version = "0.1.0"
+description = "ML Part of Health OS"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
