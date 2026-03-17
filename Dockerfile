@@ -1,11 +1,11 @@
 FROM python:3.13-slim
 
-# Set work directory
 WORKDIR /app
 
-# Install system dependencies - FIXED: &amp;&amp; changed to &&
+# Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
+    curl \
     && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip
@@ -20,17 +20,16 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project
 COPY . .
 
-# Create non-root user - FIXED: &amp;&amp; changed to &&
+# Create non-root user
 RUN useradd --create-home appuser && chown -R appuser:appuser /app
 USER appuser
 
-# Expose port
-EXPOSE 8000
+# IMPORTANT: Change EXPOSE to 7860
+EXPOSE 7860
 
-# Healthcheck - Note: You need to install curl first!
-# Add curl to the apt-get install line above, or install it separately
+# Healthcheck - also updated to port 7860
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD curl -f http://localhost:8000/health || exit 1
+  CMD curl -f http://localhost:7860/health || exit 1
 
-# Run the application
-CMD ["uvicorn", "api.api_call:app", "--host", "0.0.0.0", "--port", "8000"]
+# Run the application - CHANGE PORT TO 7860
+CMD ["uvicorn", "api.api_call:app", "--host", "0.0.0.0", "--port", "7860"]
