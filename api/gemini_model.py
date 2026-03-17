@@ -132,5 +132,8 @@ class LLM:
             "conversation": msg
         })
 
-        return response
+        from api.json_converter import FHIRProcessor
+        processor = FHIRProcessor()
+        formatted_result = processor.process_response({'response': response})
+        return formatted_result
 

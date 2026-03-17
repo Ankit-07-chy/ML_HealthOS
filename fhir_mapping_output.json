@@ -1,0 +1,238 @@
+{
+  "summary": "Patient Michael Chen, 42, presents with a few months history of intense, daily tension-type headaches, rated 6-7/10, primarily at temples and spreading to neck. Aggravated by screen time, poor sleep, skipped meals, and associated with teeth grinding and high stress. Physical exam revealed muscle tension in trapezius and jaw clicking. The doctor recommended lifestyle modifications including ergonomic changes, reduced caffeine, increased water intake, regular exercise, a night guard for bruxism, stress management techniques, and improved sleep hygiene.",
+  "fhir_mapping": {
+    "patient": {
+      "full_name": "Michael Chen",
+      "first_name": "Michael",
+      "last_name": "Chen",
+      "gender": "Male",
+      "birth_date": "1982-06-15",
+      "age": "43 years"
+    },
+    "encounter": {
+      "visit_reason": "intense headaches",
+      "visit_date": "2026-03-17",
+      "visit_type": "Initial Consultation"
+    },
+    "conditions": [
+      {
+        "description": "intense headaches",
+        "clinical_status": "Active",
+        "code": {
+          "value": "25064002",
+          "system": "http://snomed.info/sct",
+          "display": "Headache"
+        }
+      },
+      {
+        "description": "tension-type headaches",
+        "clinical_status": "Active",
+        "code": {
+          "value": "274636001",
+          "system": "http://snomed.info/sct",
+          "display": "Tension-type headache"
+        }
+      },
+      {
+        "description": "Light bothers me a bit",
+        "clinical_status": "Active",
+        "code": {
+          "value": "24826004",
+          "system": "http://snomed.info/sct",
+          "display": "Photophobia"
+        }
+      },
+      {
+        "description": "grinding my teeth at night",
+        "clinical_status": "Active",
+        "code": {
+          "value": "194017009",
+          "system": "http://snomed.info/sct",
+          "display": "Bruxism"
+        }
+      },
+      {
+        "description": "jaw sometimes feels sore in the morning",
+        "clinical_status": "Active",
+        "code": {
+          "value": "27464000",
+          "system": "http://snomed.info/sct",
+          "display": "Jaw pain"
+        }
+      },
+      {
+        "description": "It clicks a little on the left side (jaw)",
+        "clinical_status": "Active",
+        "code": {
+          "value": "30177001",
+          "system": "http://snomed.info/sct",
+          "display": "Clicking jaw"
+        }
+      },
+      {
+        "description": "Irritable with my wife and kids",
+        "clinical_status": "Active",
+        "code": {
+          "value": "128485002",
+          "system": "http://snomed.info/sct",
+          "display": "Irritability"
+        }
+      },
+      {
+        "description": "stress levels are pretty high right now",
+        "clinical_status": "Active",
+        "code": {
+          "value": "735950004",
+          "system": "http://snomed.info/sct",
+          "display": "Stress"
+        }
+      }
+    ],
+    "observations": [
+      {
+        "description": "Systolic blood pressure",
+        "category": "Vital Sign",
+        "value": 118,
+        "unit": "mmHg",
+        "code": {
+          "value": "8480-6",
+          "system": "http://loinc.org",
+          "display": "Systolic blood pressure"
+        }
+      },
+      {
+        "description": "Diastolic blood pressure",
+        "category": "Vital Sign",
+        "value": 76,
+        "unit": "mmHg",
+        "code": {
+          "value": "8462-4",
+          "system": "http://loinc.org",
+          "display": "Diastolic blood pressure"
+        }
+      },
+      {
+        "description": "Pain severity - 0-10 rating",
+        "category": "Symptom",
+        "value": 7,
+        "unit": "/10",
+        "code": {
+          "value": "72593-5",
+          "system": "http://loinc.org",
+          "display": "Pain severity - 0-10 rating"
+        }
+      },
+      {
+        "description": "significant tightness in your trapezius muscles",
+        "category": "Physical Finding",
+        "value": null,
+        "unit": "",
+        "code": {
+          "value": "24920005",
+          "system": "http://snomed.info/sct",
+          "display": "Muscle spasm"
+        }
+      },
+      {
+        "description": "A little tightness on the right side (neck) when I turn all the way",
+        "category": "Physical Finding",
+        "value": null,
+        "unit": "",
+        "code": {
+          "value": "24920005",
+          "system": "http://snomed.info/sct",
+          "display": "Muscle spasm"
+        }
+      },
+      {
+        "description": "4 or 5 cups of coffee daily",
+        "category": "Lifestyle",
+        "value": null,
+        "unit": "",
+        "code": {
+          "value": "160654006",
+          "system": "http://snomed.info/sct",
+          "display": "Coffee consumption"
+        }
+      },
+      {
+        "description": "2 glasses of water a day",
+        "category": "Lifestyle",
+        "value": null,
+        "unit": "",
+        "code": {
+          "value": "364640000",
+          "system": "http://snomed.info/sct",
+          "display": "Water intake"
+        }
+      },
+      {
+        "description": "sits for 3 or 4 hours straight at computer",
+        "category": "General Observation",
+        "value": null,
+        "unit": "",
+        "code": {
+          "value": "224978000",
+          "system": "http://snomed.info/sct",
+          "display": "Sedentary lifestyle"
+        }
+      },
+      {
+        "description": "fallen off that habit of exercise",
+        "category": "Lifestyle",
+        "value": null,
+        "unit": "",
+        "code": {
+          "value": "229712009",
+          "system": "http://snomed.info/sct",
+          "display": "Lack of exercise"
+        }
+      },
+      {
+        "description": "snacks a lot on chips, cookies",
+        "category": "General Observation",
+        "value": null,
+        "unit": "",
+        "code": {
+          "value": "225577004",
+          "system": "http://snomed.info/sct",
+          "display": "Snack eating habit"
+        }
+      },
+      {
+        "description": "doesn't sleep well",
+        "category": "Sleep Pattern",
+        "value": null,
+        "unit": "",
+        "code": {
+          "value": "398910005",
+          "system": "http://snomed.info/sct",
+          "display": "Sleep problem"
+        }
+      },
+      {
+        "description": "watches TV in bed until falls asleep",
+        "category": "Sleep Pattern",
+        "value": null,
+        "unit": "",
+        "code": {
+          "value": "442083002",
+          "system": "http://snomed.info/sct",
+          "display": "Poor sleep hygiene"
+        }
+      }
+    ],
+    "vital_signs": {
+      "blood_pressure_systolic": "118 mmHg",
+      "blood_pressure_diastolic": "76 mmHg",
+      "pain_level": "7/10",
+      "blood_pressure": "118 mmHg/76 mmHg"
+    }
+  },
+  "metadata": {
+    "generated_at": "2026-03-17T23:02:58.582098",
+    "version": "FHIR R4",
+    "total_conditions": 8,
+    "total_observations": 12
+  }
+}
