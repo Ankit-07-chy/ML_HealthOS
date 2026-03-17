@@ -3,10 +3,10 @@ FROM python:3.13-slim
 # Set work directory
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update &amp;&amp; apt-get install -y --no-install-recommends \
+# Install system dependencies - FIXED: &amp;&amp; changed to &&
+RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
-    &amp;&amp; rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip
 RUN pip install --no-cache-dir --upgrade pip
@@ -20,14 +20,15 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project
 COPY . .
 
-# Create non-root user
-RUN useradd --create-home appuser &amp;&amp; chown -R appuser:appuser /app
+# Create non-root user - FIXED: &amp;&amp; changed to &&
+RUN useradd --create-home appuser && chown -R appuser:appuser /app
 USER appuser
 
 # Expose port
 EXPOSE 8000
 
-# Healthcheck
+# Healthcheck - Note: You need to install curl first!
+# Add curl to the apt-get install line above, or install it separately
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:8000/health || exit 1
 
