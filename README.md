@@ -2,7 +2,7 @@
 title: HealthOS
 sdk: docker
 license: mit
-short_description: 'ML & LLM API Backend for HealthOS — AI-Powered Clinical Documentation'
+short_description: 'HealthOS ML API — Clinical AI with FHIR RAG'
 ---
 
 # 🧠 HealthOS — ML & LLM API
