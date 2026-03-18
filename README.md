@@ -1,12 +1,17 @@
 ---
 title: HealthOS
-emoji: 🦀
-colorFrom: blue
-colorTo: indigo
 sdk: docker
-pinned: false
 license: mit
 short_description: 'This Is ML part API Key for HealthOS. '
 ---
+# `ML` Part For HealthOS.
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
+Here is `API` [Link](https://biharibabu-healthos.hf.space/) for Calling HealthOS
+================
+HealthOS/llm api is Taking conversation b/w doctor and patients 
+----------------------
+In this We are using FastAPI for developing the API, for LLM Part We are using Google Gemini 2.5 Flash Model.
+--------------
+For Knowledge base(RAG) Using Publicaly Available FHIR Based that can Make LLM not to hallucinate based on the Data available on the training for particular LLM.
+=====
